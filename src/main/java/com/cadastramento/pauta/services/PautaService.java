@@ -5,16 +5,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cadastramento.pauta.entities.User;
-import com.cadastramento.pauta.repositories.UserRepository;
+import com.cadastramento.pauta.entities.Pauta;
+import com.cadastramento.pauta.repositories.PautaRepository;
 
 @Service
-public class UserService {
+public class PautaService {
 	
 	@Autowired
-	private UserRepository repository;
+	private PautaRepository repository;
 	
-	public List<User> findAll() {
+	public List<Pauta> findAll() {
 		return repository.findAll();
 	}
 

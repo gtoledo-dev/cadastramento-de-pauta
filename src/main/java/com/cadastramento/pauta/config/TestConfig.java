@@ -7,21 +7,21 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.cadastramento.pauta.entities.User;
-import com.cadastramento.pauta.repositories.UserRepository;
+import com.cadastramento.pauta.entities.Pauta;
+import com.cadastramento.pauta.repositories.PautaRepository;
 
 @Configuration
 @Profile("test")
 public class TestConfig implements CommandLineRunner{
 	
 	@Autowired
-	private UserRepository userRepository;
+	private PautaRepository userRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
 	
-		User u1 = new User(null, "Maria Brown", "37000055532", "voto");
-		User u2 = new User(null, "Alex Green", "41000085635", "voto");
+		Pauta u1 = new Pauta(null, "Maria Brown", "voto");
+		Pauta u2 = new Pauta(null, "Alex Green", "voto");
 		
 		userRepository.saveAll(Arrays.asList(u1, u2));
 		

@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User implements Serializable {
+public class Pauta implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -17,20 +17,18 @@ public class User implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private String cpf;
 	private String decription;
 
 	
-	public User() {
+	public Pauta() {
 		
 	}
 
 
-	public User(Long id, String name, String cpf, String decription) {
+	public Pauta(Long id, String name, String decription) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.cpf = cpf;
 		this.decription = decription;
 	}
 
@@ -52,16 +50,6 @@ public class User implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-
-	public String getCpf() {
-		return cpf;
-	}
-
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
 	}
 
 
@@ -89,22 +77,15 @@ public class User implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		Pauta other = (Pauta) obj;
 		return Objects.equals(id, other.id);
 	}
 
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", cpf=" + cpf + ", decription=" + decription + "]";
+		return "Pauta [id=" + id + ", name=" + name + ", decription=" + decription + "]";
 	}
-
-	
-
-
-
-	
-	
 	
 	
 	

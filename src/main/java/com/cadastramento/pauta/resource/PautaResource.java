@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cadastramento.pauta.entities.User;
-import com.cadastramento.pauta.services.UserService;
+import com.cadastramento.pauta.entities.Pauta;
+import com.cadastramento.pauta.services.PautaService;
 
 @RestController
 @RequestMapping(value = "/users")
-public class UserResource {
+public class PautaResource {
 	
 	@Autowired
-	private UserService service;
+	private PautaService service;
 	
 	@GetMapping
-	public ResponseEntity<List> finAll() {
-		List<User> list = service.findAll();
+	public ResponseEntity<List<Pauta>> findAll() {
+		List<Pauta> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 
