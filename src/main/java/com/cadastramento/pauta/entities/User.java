@@ -1,4 +1,4 @@
-package com.example.course.entities;
+package com.cadastramento.pauta.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
