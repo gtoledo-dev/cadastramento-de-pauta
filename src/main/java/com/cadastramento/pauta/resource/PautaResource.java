@@ -12,7 +12,7 @@ import com.cadastramento.pauta.entities.Pauta;
 import com.cadastramento.pauta.services.PautaService;
 
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping(value = "/pauta")
 public class PautaResource {
 	
 	@Autowired
