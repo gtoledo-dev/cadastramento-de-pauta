@@ -23,5 +23,9 @@ public class VotoService {
 		Optional<Voto> obj = repository.findById(id);
 		return obj.get();
 	}
+	
+	public Voto insert(Voto obj) {
+		return repository.save(obj);
+	}
 
 }

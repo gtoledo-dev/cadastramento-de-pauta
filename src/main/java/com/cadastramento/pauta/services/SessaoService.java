@@ -23,5 +23,9 @@ public class SessaoService {
 		Optional<Sessao> obj = repository.findById(id);
 		return obj.get();
 	}
+	
+	public Sessao insert(Sessao obj) {
+		return repository.save(obj);
+	}
 
 }

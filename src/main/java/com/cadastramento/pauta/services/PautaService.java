@@ -23,5 +23,9 @@ public class PautaService {
 		Optional<Pauta> obj = repository.findById(id);
 		return obj.get();
 	}
+	
+	public Pauta insert(Pauta obj) {
+		return repository.save(obj);
+	}
 
 }
