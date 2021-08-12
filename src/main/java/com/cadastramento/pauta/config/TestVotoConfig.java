@@ -21,8 +21,9 @@ public class TestVotoConfig implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		Voto v1 = new Voto(null, "12345", "37000055532");
+		Voto v2 = new Voto(null, "1234567", "27000033355");
 		
-		votoRepository.saveAll(Arrays.asList(v1));
+		votoRepository.saveAll(Arrays.asList(v1,v2));
 		
 		
 	}

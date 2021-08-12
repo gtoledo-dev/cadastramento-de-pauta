@@ -21,8 +21,9 @@ public class TestSessaoConfig implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		Sessao s1 = new Sessao(null, "123", "11/08/2021", "2 min");
+		Sessao s2 = new Sessao(null, "1234", "12/08/2021", "1 min");
 		
-		sessaoRepository.saveAll(Arrays.asList(s1));
+		sessaoRepository.saveAll(Arrays.asList(s1,s2));
 		
 	}
 
