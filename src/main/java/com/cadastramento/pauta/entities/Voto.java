@@ -1,9 +1,21 @@
 package com.cadastramento.pauta.entities;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Voto {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Voto implements Serializable{
 	
+
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String codigoSessao;
 	private String cpfAssociado;
