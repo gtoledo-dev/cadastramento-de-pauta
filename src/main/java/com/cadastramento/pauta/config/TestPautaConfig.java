@@ -12,7 +12,7 @@ import com.cadastramento.pauta.repositories.PautaRepository;
 
 @Configuration
 @Profile("test")
-public class TestConfig implements CommandLineRunner{
+public class TestPautaConfig implements CommandLineRunner{
 	
 	@Autowired
 	private PautaRepository userRepository;
